@@ -1,0 +1,17 @@
+/*
+ Theme Name: Twenty Twenty One Child
+ Theme URL: http://example.com/twentytwentyone-child/
+ Description: Twenty Twenty One Child Theme
+ Author: ME
+ Author URL: http://me.com
+ Template: twentytwentyone
+ Version: 1.1
+ Text Domain: twentytwentyone-child
+ */
+.site-title {
+  color: #f00 !important;
+  font-size: 3em;
+}
+.site-description {
+  color: rgb(255, 136, 0) !important;
+}
