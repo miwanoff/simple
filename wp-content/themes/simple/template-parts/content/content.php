@@ -13,6 +13,8 @@
             <a href="<?php the_permalink();?>" rel="bookmark"><?php echo get_the_title(); ?></a>
         </h1>
         <?php endif;?>
+        <a href="<?php the_permalink();?> " title=" <?php the_title();?> ">
+            <?php the_post_thumbnail('thumbnail');?></a>
         <!-- Вывод рубрик и тегов -->
         <?php echo get_the_category_list(); ?>
         <?php echo get_the_tag_list('', ', '); ?>
