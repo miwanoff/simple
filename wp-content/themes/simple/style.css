@@ -96,8 +96,8 @@ li {
 
 .sidebar {
   color: #aaa;
-  display: inline-block;
-  /* float: left; */
+  /* display: inline-block; */
+  float: left;
   width: 300px;
   padding: 20px 0;
   height: 100%;
