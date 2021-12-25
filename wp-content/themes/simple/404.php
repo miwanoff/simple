@@ -8,7 +8,8 @@
  */
 
 get_header();
-get_sidebar();?>
+get_sidebar();
+?>
 <div class="site-content">
     <header class="entry-header">
         <h1 class="entry-title">
