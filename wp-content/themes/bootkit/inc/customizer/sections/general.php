@@ -27,7 +27,33 @@ Kirki::add_field('theme_config_id', [
 
         ],
     ],
-]); //Typography panel + sections
+]); 
+Kirki::add_field('theme_config_id', [
+    'type' => 'typography',
+    'settings' => 'typography_setting_logo',
+    'label' => esc_html__('Automatic Google Fonts control', 'text-domain'),
+    'section' => 'general_settings',
+    'default' => [
+        'font-family' => 'Noto Serif',
+        'variant' => '400',
+        'font-size' => '14px',
+        'line-height' => '1.5',
+        'letter-spacing' => '0',
+        'color' => '#333333',
+        'text-transform' => 'none',
+        'text-align' => 'left',
+    ],
+    'priority' => 10,
+    'transport' => 'auto',
+    'output' => [
+        [
+            'element' => '.kirki',
+        ],
+    ],
+]);
+
+
+//Typography panel + sections
 Kirki::add_section('section_id', [
     'priority' => 4,
     'title' => esc_html__('Fonts and colors', 'text-domain'),

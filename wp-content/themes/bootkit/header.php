@@ -74,7 +74,7 @@ if (get_theme_mod('bootkit_phone_number')) {
         </div><!-- #top-social end -->
         <?php $text_value = get_theme_mod('al-logo', 'DEFAULT VALUE');?>
         <div class="kirki"
-            style="font-weight:bold; border: 3px gray solid; padding: 5px; border-radius:5px; display:inline-block; color: gray;">
+            style="font-weight:bold; border: 3px gray solid; padding: 5px; border-radius:5px; display:inline-block; ">
             <?php echo $text_value; ?></div>
     </nav>
     <?php if (is_front_page()) {?>
