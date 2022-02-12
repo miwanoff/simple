@@ -46,10 +46,25 @@ $defaults = array(
             'before' => '<div class="row justify-content-center align-items-center">' . __('Pages:'),
             'after' => '</div>',
         );
+
         wp_link_pages($defaults);
         edit_post_link();
         ?>
-
+            <!-- Post Author Info -->
+            <div class="card">
+                <div class="card-header">
+                    <strong>
+                        Posted by
+                        <a href="<?php echo $author_URL; ?>"><?php the_author();?></a>
+                    </strong>
+                </div>
+                <div class="card-body">
+                    <div class="author-image">
+                        <?php echo get_avatar($author_ID, 90, '', false, ['class' => 'img-circle']); ?>
+                    </div>
+                    <?php echo nl2br(get_the_author_meta('description')); ?>
+                </div>
+            </div><!-- Post Single - Author End -->
             <!-- Pagination -->
             <ul class="pagination justify-content-center mb-4">
                 <li class="page-item">
@@ -112,17 +127,36 @@ if (has_post_thumbnail()) {
                     <li><i class="icon-calendar3"></i> <?php echo get_the_date(); ?></li>
                     <li><i class="icon-comments"></i> <?php comments_number('0');?></li>
                 </ul>
-                <div class="entry-content">
-                    <?php the_excerpt();?>
-                </div> -->
+                <div class="entry-content"> -->
+                <?php
+the_excerpt();
+        $defaults = array(
+            'before' => '<div class="row justify-content-center align-items-center">' . __('Pages:'),
+            'after' => '</div>',
+        );
+        wp_link_pages($defaults);
+        edit_post_link();
+
+        ?>
+                <!-- Pagination -->
+                <ul class="pagination justify-content-center mb-4">
+                    <li class="page-item">
+                        <?php previous_post_link();?>
+                    </li>
+                    <li class="page-item">
+                        <?php next_post_link();?>
+                    </li>
+                </ul>
+
             </div>
         </div>
-        <?php
+    </div>
+    <?php
 }
     wp_reset_postdata();
 }
 ?>
-    </div>
+</div>
 </div>
 <!-- /.container -->
 

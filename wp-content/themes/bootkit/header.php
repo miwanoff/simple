@@ -42,6 +42,36 @@ if (has_nav_menu('primary')) {
 ?>
             </div>
         </div>
+        <!-- Top Social ============================================= -->
+        <div id="top-social">
+            <ul>
+                <?php
+if (get_theme_mod('bootkit_facebook_handle')) {
+    ?>
+                <li><a href="<?php echo get_theme_mod('bootkit_facebook_handle'); ?>" target="_blank"><i
+                            class="fa fa-facebook"></i></a>
+                </li>
+                <?php
+}
+if (get_theme_mod('bootkit_instagram_handle')) {
+    ?>
+                <li><a href="<?php echo get_theme_mod('bootkit_instagram_handle'); ?>" target="_blank"><i
+                            class="fa fa-instagram"></i></a>
+                </li><?php
+}
+if (get_theme_mod('bootkit_email')) {
+    ?><li><a href="mailto:<?php echo get_theme_mod('bootkit_email'); ?>"><i
+                            class="fa fa-envelope"></i><?php echo get_theme_mod('bootkit_email'); ?></a></li><?php
+}
+
+if (get_theme_mod('bootkit_phone_number')) {
+    ?><li><a href="tel:+<?php echo get_theme_mod('bootkit_phone_number'); ?>"><i
+                            class="fa fa-phone"></i>+<?php echo get_theme_mod('bootkit_phone_number'); ?></a></li><?php
+}
+?>
+                ?>
+            </ul>
+        </div><!-- #top-social end -->
     </nav>
     <?php if (is_front_page()) {?>
     <header>
@@ -87,4 +117,24 @@ if (has_nav_menu('primary')) {
             </a>
         </div>
     </header>
-    <?php }?>
+    <?php }?> <div class="container">
+        <?php if (get_theme_mod('bootkit_header_show_search')) {?>
+        <!-- Top Search  ============================ -->
+        <div class="col-md-4 mt-4 mb-2 pl-0">
+            <form id="searchform" method="get" action="<?php echo esc_url(home_url('/')); ?>">
+
+                <div class="input-group">
+                    <input type="text" class="search-field form-control" name="s" placeholder="Search"
+                        value="<?php echo get_search_query(); ?>">
+
+                    <button type="submit" class="btn btn-secondary"><i class="fa fa-search"></i></button>
+                </div>
+            </form>
+        </div><!-- #top-search end -->
+        <?php }?>
+    </div>
+
+    <?php $text_value = get_theme_mod('al-logo', 'DEFAULT VALUE');?>
+    <div class="kirki"
+        style="font-weight:bold; border: 10px gray solid; padding: 10px; border-radius:50%; display:inline-block;">
+        <?php echo $text_value; ?></div>

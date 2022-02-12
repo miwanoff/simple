@@ -14,9 +14,13 @@ function bootkit_enqueue()
     wp_enqueue_style('bootkit_modern_business');
     wp_enqueue_style('bootkit_my');
 
+    wp_register_style('bootkit_font-awesome_fonts',
+        'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css', [], $ver);
+
     //----Scripts-----------
     wp_register_script('bootkit_bootstrap', $url .
         '/assets/vendor/bootstrap/js/bootstrap.bundle.min.js', 'jquery', $ver, true);
     wp_enqueue_script('jquery');
     wp_enqueue_script('bootkit_bootstrap');
+    wp_enqueue_style('bootkit_font-awesome_fonts');
 }
